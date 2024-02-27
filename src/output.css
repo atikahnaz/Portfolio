@@ -580,22 +580,20 @@ video {
   border-radius: 0.375rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-b-2 {
   border-bottom-width: 2px;
 }
 
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+.border-t-0 {
+  border-top-width: 0px;
 }
 
-.bg-pf-cream {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 250 242 / var(--tw-bg-opacity));
+.border-t-2 {
+  border-top-width: 2px;
 }
 
 .bg-pf-blue {
@@ -603,9 +601,9 @@ video {
   background-color: rgb(16 46 105 / var(--tw-bg-opacity));
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.bg-pf-cream {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 250 242 / var(--tw-bg-opacity));
 }
 
 .px-3 {
@@ -613,9 +611,9 @@ video {
   padding-right: 0.75rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-1 {
@@ -623,9 +621,14 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-2 {
@@ -636,23 +639,45 @@ video {
   padding-top: 3rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
-}
-
-.text-pf-cream {
-  --tw-text-opacity: 1;
-  color: rgb(251 250 242 / var(--tw-text-opacity));
-}
-
-.text-pf-light-blue {
-  --tw-text-opacity: 1;
-  color: rgb(73 121 245 / var(--tw-text-opacity));
 }
 
 .text-pf-blue {
@@ -660,13 +685,32 @@ video {
   color: rgb(16 46 105 / var(--tw-text-opacity));
 }
 
+.text-pf-cream {
+  --tw-text-opacity: 1;
+  color: rgb(251 250 242 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
   }
 
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
