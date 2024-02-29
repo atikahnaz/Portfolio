@@ -2,11 +2,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./src/output.css" rel="stylesheet" />
     <title>ATIKAH</title>
   </head>
 
-  <body class="px-4 md:px-14 bg-pf-cream">
+  <body class="px-4 md:px-14 bg-pf-cream font-customFont">
     <header class="h-screen flex flex-col">
       <nav class="flex justify-between border-b-2 pt-12 pb-2">
         <div>ATIKAH</div>
@@ -26,12 +32,12 @@
         <h1 class="text-3xl md:text-5xl font-bold text-pf-blue">
           A Frontend Web Developer
         </h1>
-        <h4 class="py-4">I code and design user experience.</h4>
-        <div>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+        <h4 class="py-4">I code and design user experience (UX).</h4>
+        <div class="flex py-4 space-x-2">
+          <img src="images/twitter.png" class="w-5" />
+          <img src="images/linkedin.png" class="w-5" alt="" />
+          <img src="images/github.png" class="w-5" alt="" />
+          <img src="images/email.png" class="w-5" alt="" />
         </div>
         <div>
           <button
@@ -77,24 +83,96 @@
         <div class="text-2xl pr-4 text-pf-blue">02</div>
         <div>
           <h3 class="text-2xl text-pf-blue">SKILLS</h3>
-          <div class="flex">
-            <p>html</p>
-            <p>javascript</p>
-            <p>reactjs</p>
+          <div class="flex flex-wrap justify-between">
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div>
+              <img src="images/js.png" class="w-10" alt="" />
+              <p>Javascript</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="flex py-4 border-t-2">
-        <div class="text-2xl pr-4 text-pf-blue">03</div>
-        <div>
-          <h3 class="text-2xl text-pf-blue">PROJECTS</h3>
-          <div class="flex py-4">
+    <section id="projects" class="w-full mb-4">
+      <div class="flex border-t-2">
+        <div class="text-2xl py-3 pr-4 font-bold text-pf-blue">03</div>
+        <div class="w-full">
+          <h3 class="text-2xl text-pf-blue py-3 font-bold tracking-widest">
+            PROJECTS
+          </h3>
+          <!--projects-->
+
+          <div class="mb-4 relative">
+            <div class="">
+              <img
+                src="images/Desktop - 9.png"
+                class="bg-[#F9F6D6] rounded-2xl"
+                alt=""
+              />
+            </div>
+            <div class="absolute top-0 px-6 py-4">
+              <h4 class="text-xl font-semibold text-pf-blue py-4">
+                Food Journal
+              </h4>
+              <p class="pb-4">Track your food intake and monitor your health</p>
+              <div>
+                <button
+                  type="button"
+                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1"
+                >
+                  Github
+                </button>
+                <button
+                  type="button"
+                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1"
+                >
+                  Live Site
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--
+    <div
+            class="flex py-4 border-2 p-4 relative h-96 rounded-2xl overflow-clip"
+          >
             <div>
-              <h4 class="text-xl text-pf-blue">Food Journal</h4>
-              <p>sds sddddddddddd sssssssssss</p>
+              <h4 class="text-xl font-medium text-pf-blue py-4">
+                Food Journal
+              </h4>
+              <p class="pb-4">Track your food intake and monitor your health</p>
               <div>
                 <button
                   type="button"
@@ -109,8 +187,12 @@
                   Live Site
                 </button>
               </div>
+              <div class="absolute -bottom-14">
+                <img src="images/food-journal.png" class="scale-125" alt="" />
+              </div>
             </div>
           </div>
+          -->
         </div>
       </div>
     </section>

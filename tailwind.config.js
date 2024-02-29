@@ -9,6 +9,9 @@ module.exports = {
         "pf-blue": "#102E69",
         "pf-yellow": "#FFF61E",
       },
+      fontFamily: {
+        customFont: ["Roboto Serif", "sans-serif"],
+      },
     },
   },
   plugins: [],
