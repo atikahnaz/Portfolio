@@ -14,8 +14,13 @@
 
   <body class="px-4 md:px-14 bg-pf-cream font-customFont">
     <header class="h-screen flex flex-col">
-      <nav class="flex justify-between border-b-2 pt-12 pb-2">
+      <nav
+        class="fixed top-0 left-4 right-4 bg-pf-cream flex justify-between border-b-2 pt-12 pb-2"
+      >
         <div>ATIKAH</div>
+        <div>
+          <img src="images/bars-3.svg" alt="" />
+        </div>
         <ul class="hidden md:flex w-1/2 justify-between text-pf-blue">
           <li><a href="">HOME</a></li>
           <li><a href="">PROJECTS</a></li>
@@ -32,17 +37,19 @@
         <h1 class="text-3xl md:text-5xl font-bold text-pf-blue">
           A Frontend Web Developer
         </h1>
-        <h4 class="py-4">I code and design user experience (UX).</h4>
+        <h4 class="py-8 text-pf-blue">
+          I code and design user experience (UX).
+        </h4>
         <div class="flex py-4 space-x-2">
           <img src="images/twitter.png" class="w-5" />
           <img src="images/linkedin.png" class="w-5" alt="" />
           <img src="images/github.png" class="w-5" alt="" />
           <img src="images/email.png" class="w-5" alt="" />
         </div>
-        <div>
+        <div class="pt-4">
           <button
             type="button"
-            class="bg-pf-blue px-3 py-1 rounded-md text-pf-cream"
+            class="bg-pf-blue font-bold text-xs px-4 py-2 rounded-2xl text-pf-cream"
           >
             Contact Me
           </button>
@@ -50,86 +57,85 @@
       </div>
     </header>
 
-    <section id="aboutme">
-      <div class="flex py-4 border-t-2">
-        <div class="text-2xl pr-4 text-pf-blue">01</div>
+    <section id="aboutme" class="py-4 border-t-2">
+      <div class="flex">
+        <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">01</div>
         <div>
-          <h3 class="text-2xl text-pf-blue">ABOUT ME</h3>
+          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
+            ABOUT ME
+          </h3>
           <div class="md:flex">
+            <img src="images/jkred.jpg" alt="" />
             <p class="text-base pt-4 md:w-1/2">
-              My name is Atikah, frontend web developer from Kuala Lumpur,
-              Malaysia. I have a passion for crafting engaging and user-friendly
-              websites that prioritize both functionality and design. My journey
-              into programming began with a fascination for technology, which
-              led me to pursue the CS50X: Introduction to Computer Science
-              course from Harvard. This foundational experience ignited my
-              interest in web development and inspired me to dive deeper into
-              the world of frontend engineering. To hone my skills in creating
-              intuitive user experiences, I embarked on the Google UX Design
-              course, where I learned the principles and methodologies behind
-              effective interface design. This knowledge has been invaluable in
-              shaping my approach to building websites and applications that
-              seamlessly blend form and function.
+              Hey there! I'm Atikah, a frontend web developer from Kuala Lumpur,
+              Malaysia. I'm passionate about crafting user-friendly websites
+              that blend style and functionality. My journey began with the
+              CS50X course at Harvard, and I've since delved into UX design to
+              enhance my skills. Let's build something awesome together!
             </p>
-            <h1>image</h1>
-            <img src="" alt="" />
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills">
-      <div class="flex py-4 border-t-2">
-        <div class="text-2xl pr-4 text-pf-blue">02</div>
+    <section id="skills" class="py-4 border-t-2">
+      <div class="flex">
+        <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">02</div>
         <div>
-          <h3 class="text-2xl text-pf-blue">SKILLS</h3>
-          <div class="flex flex-wrap justify-between">
+          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
+            SKILLS
+          </h3>
+          <div class="grid grid-cols-5 gap-4">
             <div>
               <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
+              <p class="text-xs text-center">Javascript</p>
+            </div>
+            <div>
+              <img src="images/html.png" class="w-10" alt="" />
+              <p class="text-xs text-center">HTML</p>
+            </div>
+            <div>
+              <img src="images/letter-c.png" class="w-10" alt="" />
+              <p class="text-xs text-center">C</p>
+            </div>
+            <div>
+              <img src="images/css-3.png" class="w-10" alt="" />
+              <p class="text-xs text-center">CSS</p>
+            </div>
+            <div>
+              <img src="images/atom.png" class="w-10" alt="" />
+              <p class="text-xs text-center">ReactJS</p>
             </div>
             <div>
               <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
+              <p class="text-xs text-center">Tailwind</p>
             </div>
             <div>
               <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
+              <p class="text-xs text-center">Bootstrap</p>
             </div>
             <div>
               <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
+              <p class="text-xs text-center">SQL</p>
             </div>
             <div>
-              <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
+              <img src="images/github.png" class="w-10" alt="" />
+              <p class="text-xs">Github</p>
             </div>
             <div>
-              <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
-            </div>
-            <div>
-              <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
-            </div>
-            <div>
-              <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
-            </div>
-            <div>
-              <img src="images/js.png" class="w-10" alt="" />
-              <p>Javascript</p>
+              <img src="images/figma.png" class="w-10" alt="" />
+              <p class="text-xs text-center">Figma</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="w-full mb-4">
-      <div class="flex border-t-2">
-        <div class="text-2xl py-3 pr-4 font-bold text-pf-blue">03</div>
+    <section id="projects" class="w-full mb-4 py-4 border-t-2">
+      <div class="flex">
+        <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">03</div>
         <div class="w-full">
-          <h3 class="text-2xl text-pf-blue py-3 font-bold tracking-widest">
+          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
             PROJECTS
           </h3>
           <!--projects-->
@@ -143,20 +149,22 @@
               />
             </div>
             <div class="absolute top-0 px-6 py-4">
-              <h4 class="text-xl font-semibold text-pf-blue py-4">
+              <h4 class="text-lg font-semibold text-pf-blue py-4">
                 Food Journal
               </h4>
-              <p class="pb-4">Track your food intake and monitor your health</p>
+              <p class="pb-4 text-base">
+                Track your food intake and monitor your health
+              </p>
               <div>
                 <button
                   type="button"
-                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1"
+                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
                 >
                   Github
                 </button>
                 <button
                   type="button"
-                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1"
+                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
                 >
                   Live Site
                 </button>
