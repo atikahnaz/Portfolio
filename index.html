@@ -25,7 +25,7 @@
         <!-- hamburger menu side bar-->
         <div
           id="hamburger-menu"
-          class="absolute hidden md:hidden bg-slate-600 top-0 w-screen h-screen p-6"
+          class="absolute hidden md:hidden bg-[#0D2C68] top-0 w-screen h-screen p-6"
         >
           <div
             id="closeIcon"
@@ -34,15 +34,20 @@
           >
             <img src="images/close.svg" alt="" />
           </div>
-          <ul class="text-pf-cream">
+          <ul class="text-pf-cream flex flex-col space-y-4 pr-4">
             <li><a href="">HOME</a></li>
+            <div class="border-b-2"></div>
             <li><a href="">PROJECTS</a></li>
+            <div class="border-b-2"></div>
             <li><a href="">ABOUT ME</a></li>
+            <div class="border-b-2"></div>
             <li><a href="">SKILLS</a></li>
+            <div class="border-b-2"></div>
             <li><a href="">CONTACT</a></li>
+            <div class="border-b-2"></div>
           </ul>
         </div>
-
+        <!--menu for desktop-->
         <ul class="hidden md:flex w-1/2 justify-between text-pf-blue">
           <li><a href="">HOME</a></li>
           <li><a href="">PROJECTS</a></li>
@@ -87,13 +92,14 @@
             ABOUT ME
           </h3>
           <div class="md:flex">
-            <img src="images/jkred.jpg" alt="" />
-            <p class="text-base pt-4 md:w-1/2">
+            <img src="images/jkred.jpg" class="md:w-1/2" alt="" />
+            <p class="text-base pt-4 md:w-1/2 md:pl-4">
               Hey there! I'm Atikah, a frontend web developer from Kuala Lumpur,
               Malaysia. I'm passionate about crafting user-friendly websites
-              that blend style and functionality. My journey began with the
-              CS50X course at Harvard, and I've since delved into UX design to
-              enhance my skills. Let's build something awesome together!
+              that blend style and functionality. <br /><br />My journey began
+              with the CS50X course at Harvard, and I've since delved into UX
+              design to enhance my skills. Let's build something awesome
+              together!
             </p>
           </div>
         </div>
@@ -160,9 +166,105 @@
           <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
             PROJECTS
           </h3>
-          <!--projects-->
+          <!--project 1st-->
+          <!--container-->
+          <div
+            class="border-b-2 md:py-0 py-10 md:flex flex-row-reverse justify-between"
+          >
+            <div class="md:w-1/2">
+              <img src="images/food-journal.png" alt="" />
+            </div>
+            <div class="flex flex-col justify-center">
+              <h3
+                class="md:text-3xl font-bold text-xl pb-4 tracking-wider text-pf-blue"
+              >
+                Food Journal
+              </h3>
+              <p class="pb-4 text-sm font-normal">
+                Track your food intake and monitor your health
+              </p>
+              <div class="flex space-x-2 font-extralight text-xs pb-4">
+                <p class="border-2 rounded-xl px-2 py-1">React</p>
+                <p class="border-2 rounded-xl px-2 py-1">Vite</p>
+                <p class="border-2 rounded-xl px-2 py-1">Material UI</p>
+                <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  class="bg-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs"
+                >
+                  Github
+                </button>
+                <button
+                  type="button"
+                  class="bg-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs"
+                >
+                  Live Site
+                </button>
+              </div>
+            </div>
+          </div>
 
-          <div class="mb-4 relative">
+          <!--project 2nd-->
+          <!--container-->
+          <div class="border-b-2 py-10">
+            <div>
+              <img src="images/ecommerce.png" alt="" />
+            </div>
+            <h3 class="font-bold text-xl pb-4 tracking-wider text-pf-blue">
+              E-commerce product page
+            </h3>
+            <p class="pb-4 text-sm font-normal">
+              Responsive website where users can add, update and delete product
+              in a cart.
+            </p>
+            <div>
+              <button
+                type="button"
+                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+              >
+                Github
+              </button>
+              <button
+                type="button"
+                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+              >
+                Live Site
+              </button>
+            </div>
+          </div>
+
+          <!--project 3rd-->
+          <!--container-->
+          <div class="border-b-2 py-10">
+            <div>
+              <img src="images/interactive-comments.png" alt="" />
+            </div>
+            <h3 class="font-bold text-xl pb-4 tracking-wider text-pf-blue">
+              Interactive Comments
+            </h3>
+            <p class="pb-4 text-sm font-normal">
+              Users can leave a comment, delete and update text.
+            </p>
+            <div>
+              <button
+                type="button"
+                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+              >
+                Github
+              </button>
+              <button
+                type="button"
+                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+              >
+                Live Site
+              </button>
+            </div>
+          </div>
+          <!--projects-->
+          <!--
+<div class="mb-4 relative">
             <div class="">
               <img
                 src="images/Desktop - 9.png"
@@ -193,8 +295,10 @@
               </div>
             </div>
           </div>
+          -->
 
-          <div
+          <!--
+ <div
             class="flex py-4 border-2 p-4 relative h-96 rounded-2xl overflow-clip"
           >
             <div>
@@ -221,10 +325,48 @@
               </div>
             </div>
           </div>
+          -->
         </div>
       </div>
     </section>
-    <section></section>
+
+    <section id="contact-form">
+      <div class="flex">
+        <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">04</div>
+        <div>
+          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
+            CONTACT
+          </h3>
+
+          <p class="text-base pt-4 pb-8">
+            Let me know if you are interested to work together!
+          </p>
+
+          <form action="" method="post" id="message-form">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full bg-pf-cream border-b-2 border-pf-blue py-2 mb-4"
+            />
+            <input
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              class="w-full bg-pf-cream border-b-2 border-pf-blue py-2 mb-4"
+            />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Hi Atikah!"
+              class="w-full border-2"
+            ></textarea>
+          </form>
+          <button type="submit">SEND</button>
+        </div>
+      </div>
+    </section>
     <footer></footer>
   </body>
 </html>
