@@ -16,7 +16,7 @@
     <script src="script.js"></script>
     <header class="h-screen flex flex-col">
       <nav
-        class="fixed top-0 left-4 right-4 z-10 bg-pf-cream flex justify-between border-b-2 pt-12 pb-2"
+        class="md:mx-10 fixed top-0 left-4 right-4 z-10 bg-pf-cream flex justify-between border-b-2 pt-12 pb-2"
       >
         <div>ATIKAH</div>
         <div id="hamburger-icon" class="md:hidden" onclick="toggleMenu()">
@@ -84,7 +84,7 @@
       </div>
     </header>
 
-    <section id="aboutme" class="py-4 border-t-2">
+    <section id="aboutme" class="py-4 border-t-2 bg-pf">
       <div class="flex">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">01</div>
         <div>
@@ -113,7 +113,7 @@
           <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
             SKILLS
           </h3>
-          <div class="grid grid-cols-5 gap-4">
+          <div class="grid grid-cols-5 gap-5 py-10">
             <div>
               <img src="images/js.png" class="w-10" alt="" />
               <p class="text-xs text-center">Javascript</p>
@@ -237,7 +237,7 @@
 
           <!--project 3rd-->
           <!--container-->
-          <div class="border-b-2 py-10">
+          <div class="py-10">
             <div>
               <img src="images/interactive-comments.png" alt="" />
             </div>
@@ -330,8 +330,8 @@
       </div>
     </section>
 
-    <section id="contact-form">
-      <div class="flex">
+    <section id="contact-form" class="py-4 border-t-2">
+      <div class="flex py-4">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">04</div>
         <div>
           <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
@@ -342,31 +342,45 @@
             Let me know if you are interested to work together!
           </p>
 
-          <form action="" method="post" id="message-form">
+          <form
+            action="mailto:atikahnazir6@gmail.com"
+            method="post"
+            enctype="text/plain"
+            id="message-form"
+          >
             <input
               type="text"
               placeholder="Name"
-              class="w-full bg-pf-cream border-b-2 border-pf-blue py-2 mb-4"
+              class="w-full bg-pf-cream border-b border-pf-blue pl-1 py-2 mb-4"
             />
             <input
               type="email"
               placeholder="E-mail"
               name="email"
-              class="w-full bg-pf-cream border-b-2 border-pf-blue py-2 mb-4"
+              class="w-full bg-pf-cream border-b border-pf-blue pl-1 py-2 mb-4"
             />
             <textarea
               name="message"
               id="message"
-              cols="30"
-              rows="10"
+              cols="10"
+              rows="3"
               placeholder="Hi Atikah!"
-              class="w-full border-2"
+              class="w-full border-pf-blue border rounded-md p-2 bg-pf-cream"
             ></textarea>
           </form>
-          <button type="submit">SEND</button>
+          <button
+            type="submit"
+            class="bg-pf-blue text-pf-cream text-sm px-5 py-2 rounded-3xl"
+          >
+            Send
+          </button>
         </div>
       </div>
     </section>
-    <footer></footer>
+    <footer
+      class="absolute left-0 right-0 bg-yellow-300 py-5 font-medium text-sm text-pf-title text-center"
+    >
+      Copyright Atikah 2024
+    </footer>
   </body>
 </html>
