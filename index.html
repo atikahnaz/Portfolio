@@ -15,7 +15,7 @@
   <body class="bg-pf-cream font-customFont border">
     <script src="script.js"></script>
     <nav
-      class="fixed bg-pf-cream top-0 left-0 right-0 z-10 px-8 flex justify-between border-b-2 pt-12 pb-2"
+      class="fixed bg-pf-cream top-0 left-0 right-0 z-10 px-8 lg:px-20 flex justify-between border-b-2 pt-12 pb-2"
     >
       <div>ATIKAH</div>
       <div id="hamburger-icon" class="md:hidden" onclick="toggleMenu()">
@@ -50,7 +50,9 @@
         </ul>
       </div>
       <!--menu for desktop-->
-      <ul class="hidden md:flex w-1/2 justify-between text-pf-blue">
+      <ul
+        class="hidden md:flex w-2/3 justify-between font-medium text-base text-pf-blue"
+      >
         <li><a href="">HOME</a></li>
         <li><a href="#projects-line">PROJECTS</a></li>
         <li><a href="#aboutme-line">ABOUT ME</a></li>
@@ -59,7 +61,7 @@
       </ul>
     </nav>
     <header class="h-screen flex flex-col">
-      <div class="flex flex-col h-full justify-center px-8">
+      <div class="lg:px-20 flex flex-col h-full justify-center px-8">
         <h1 class="text-3xl md:text-5xl font-bold text-pf-blue">
           Hi! I'm Atikah.
         </h1>
@@ -86,16 +88,20 @@
       </div>
     </header>
     <div class="pb-14" id="aboutme-line"></div>
-    <section id="aboutme" class="pt-10 bg-pf bg-pf-blue pl-4 pr-10">
+    <section id="aboutme" class="lg:px-20 pt-10 bg-pf bg-pf-blue pl-4 pr-10">
       <div class="flex">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-cream">01</div>
         <div>
-          <h3 class="text-2xl text-pf-cream py-3 font-semibold tracking-widest">
+          <h3
+            class="text-2xl lg:text-3xl text-pf-cream py-3 font-semibold tracking-widest"
+          >
             ABOUT ME
           </h3>
           <div class="md:flex">
             <img src="images/jkred.jpg" class="md:w-1/4 py-4" alt="" />
-            <p class="text-sm text-pf-cream pt-4 pb-4 md:w-3/4 md:pl-4">
+            <p
+              class="text-sm text-pf-cream tracking-wide pt-4 pb-4 md:w-3/4 md:pl-4"
+            >
               Hey there! I'm Atikah, a frontend web developer from Kuala Lumpur,
               Malaysia. I'm passionate about crafting user-friendly websites
               that blend style and functionality. <br /><br />My journey began
@@ -110,10 +116,12 @@
     </section>
 
     <section id="skills" class="pt-10 border-t-2 pl-4 pr-10">
-      <div class="flex">
+      <div class="flex lg:px-20">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">02</div>
         <div>
-          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
+          <h3
+            class="text-2xl lg:text-3xl text-pf-title py-3 font-semibold tracking-widest"
+          >
             SKILLS
           </h3>
           <div class="grid grid-cols-5 gap-5 pt-10">
@@ -163,11 +171,16 @@
     </section>
     <div class="pb-14" id="projects-line"></div>
 
-    <section id="projects" class="w-full mb-4 pt-10 border-t-2 pl-4 pr-8">
+    <section
+      id="projects"
+      class="lg:px-20 w-full mb-4 pt-10 border-t-2 pl-4 pr-8"
+    >
       <div class="flex">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">03</div>
         <div class="w-full">
-          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
+          <h3
+            class="text-2xl lg:text-3xl text-pf-title py-3 font-semibold tracking-widest"
+          >
             PROJECTS
           </h3>
           <!--project 1st-->
@@ -178,13 +191,13 @@
             <div class="md:w-1/2">
               <img src="images/food-journal.png" alt="" />
             </div>
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center lg:space-y-4">
               <h3
                 class="md:text-3xl font-bold text-xl pb-4 tracking-wider text-pf-blue"
               >
                 Food Journal
               </h3>
-              <p class="pb-4 text-sm font-normal">
+              <p class="pb-4 text-sm md:text-base font-normal">
                 Track your food intake and monitor your health
               </p>
               <div class="flex space-x-1 font-extralight text-xs pb-4">
@@ -196,13 +209,13 @@
               <div>
                 <button
                   type="button"
-                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs"
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs md:text-base"
                 >
                   Github
                 </button>
                 <button
                   type="button"
-                  class="bg-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs"
+                  class="bg-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs md:text-base"
                 >
                   Live Site
                 </button>
@@ -223,6 +236,11 @@
               Responsive website where users can add, update and delete product
               in a cart.
             </p>
+            <div class="flex space-x-1 font-extralight text-xs pb-4">
+              <p class="border-2 rounded-xl px-2 py-1">React</p>
+              <p class="border-2 rounded-xl px-2 py-1">Vite</p>
+              <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
+            </div>
             <div>
               <button
                 type="button"
@@ -251,6 +269,11 @@
             <p class="pb-4 text-sm font-normal">
               Users can leave a comment, delete and update text.
             </p>
+            <div class="flex space-x-1 font-extralight text-xs pb-4">
+              <p class="border-2 rounded-xl px-2 py-1">React</p>
+              <p class="border-2 rounded-xl px-2 py-1">Vite</p>
+              <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
+            </div>
             <div>
               <button
                 type="button"
@@ -334,11 +357,13 @@
       </div>
     </section>
 
-    <section id="contact" class="py-10 border-t-2 pl-4 pr-10">
+    <section id="contact" class="lg:px-20 py-10 border-t-2 pl-4 pr-10">
       <div class="flex py-4">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">04</div>
         <div>
-          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
+          <h3
+            class="text-2xl lg:text-3xl text-pf-title py-3 font-semibold tracking-widest"
+          >
             CONTACT
           </h3>
 
