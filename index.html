@@ -12,52 +12,54 @@
     <title>ATIKAH</title>
   </head>
 
-  <body class="px-4 md:px-14 bg-pf-cream font-customFont">
+  <body class="bg-pf-cream font-customFont border">
     <script src="script.js"></script>
-    <header class="h-screen flex flex-col">
-      <nav
-        class="md:mx-10 fixed top-0 left-4 right-4 z-10 bg-pf-cream flex justify-between border-b-2 pt-12 pb-2"
+    <nav
+      class="fixed bg-pf-cream top-0 left-0 right-0 z-10 px-8 flex justify-between border-b-2 pt-12 pb-2"
+    >
+      <div>ATIKAH</div>
+      <div id="hamburger-icon" class="md:hidden" onclick="toggleMenu()">
+        <img src="images/bars-3.svg" alt="" />
+      </div>
+      <!-- hamburger menu side bar-->
+      <div
+        id="hamburger-menu"
+        class="absolute hidden md:hidden bg-[#0D2C68] top-0 left-0 w-screen h-screen p-6"
       >
-        <div>ATIKAH</div>
-        <div id="hamburger-icon" class="md:hidden" onclick="toggleMenu()">
-          <img src="images/bars-3.svg" alt="" />
-        </div>
-        <!-- hamburger menu side bar-->
         <div
-          id="hamburger-menu"
-          class="absolute hidden md:hidden bg-[#0D2C68] top-0 w-screen h-screen p-6"
+          id="closeIcon"
+          onclick="toggleMenu()"
+          class="flex justify-end py-6 pr-4"
         >
-          <div
-            id="closeIcon"
-            onclick="toggleMenu()"
-            class="flex justify-end py-6 pr-4"
-          >
-            <img src="images/close.svg" alt="" />
-          </div>
-          <ul class="text-pf-cream flex flex-col space-y-4 pr-4">
-            <li><a href="">HOME</a></li>
-            <div class="border-b-2"></div>
-            <li><a href="">PROJECTS</a></li>
-            <div class="border-b-2"></div>
-            <li><a href="">ABOUT ME</a></li>
-            <div class="border-b-2"></div>
-            <li><a href="">SKILLS</a></li>
-            <div class="border-b-2"></div>
-            <li><a href="">CONTACT</a></li>
-            <div class="border-b-2"></div>
-          </ul>
+          <img src="images/close.svg" alt="" />
         </div>
-        <!--menu for desktop-->
-        <ul class="hidden md:flex w-1/2 justify-between text-pf-blue">
+        <ul
+          onclick="toggleMenu()"
+          class="text-pf-cream font-semibold flex flex-col space-y-4 px-6 pt-5"
+        >
           <li><a href="">HOME</a></li>
-          <li><a href="">PROJECTS</a></li>
-          <li><a href="">ABOUT ME</a></li>
-          <li><a href="">SKILLS</a></li>
-          <li><a href="">CONTACT</a></li>
+          <div class="border-b"></div>
+          <li><a href="#projects-line">PROJECTS</a></li>
+          <div class="border-b"></div>
+          <li><a href="#aboutme-line">ABOUT ME</a></li>
+          <div class="border-b"></div>
+          <li><a href="#skills-line">SKILLS</a></li>
+          <div class="border-b"></div>
+          <li><a href="#contact">CONTACT</a></li>
+          <div class="border-b"></div>
         </ul>
-      </nav>
-
-      <div class="flex flex-col h-full justify-center">
+      </div>
+      <!--menu for desktop-->
+      <ul class="hidden md:flex w-1/2 justify-between text-pf-blue">
+        <li><a href="">HOME</a></li>
+        <li><a href="#projects-line">PROJECTS</a></li>
+        <li><a href="#aboutme-line">ABOUT ME</a></li>
+        <li><a href="#skills-line">SKILLS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <header class="h-screen flex flex-col">
+      <div class="flex flex-col h-full justify-center px-8">
         <h1 class="text-3xl md:text-5xl font-bold text-pf-blue">
           Hi! I'm Atikah.
         </h1>
@@ -83,17 +85,17 @@
         </div>
       </div>
     </header>
-
-    <section id="aboutme" class="py-4 border-t-2 bg-pf">
+    <div class="pb-14" id="aboutme-line"></div>
+    <section id="aboutme" class="pt-10 bg-pf bg-pf-blue pl-4 pr-10">
       <div class="flex">
-        <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">01</div>
+        <div class="text-2xl py-3 pr-4 font-semibold text-pf-cream">01</div>
         <div>
-          <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
+          <h3 class="text-2xl text-pf-cream py-3 font-semibold tracking-widest">
             ABOUT ME
           </h3>
           <div class="md:flex">
-            <img src="images/jkred.jpg" class="md:w-1/2" alt="" />
-            <p class="text-base pt-4 md:w-1/2 md:pl-4">
+            <img src="images/jkred.jpg" class="md:w-1/4 py-4" alt="" />
+            <p class="text-sm text-pf-cream pt-4 pb-4 md:w-3/4 md:pl-4">
               Hey there! I'm Atikah, a frontend web developer from Kuala Lumpur,
               Malaysia. I'm passionate about crafting user-friendly websites
               that blend style and functionality. <br /><br />My journey began
@@ -101,19 +103,20 @@
               design to enhance my skills. Let's build something awesome
               together!
             </p>
+            <div class="pb-14" id="skills-line"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="py-4 border-t-2">
+    <section id="skills" class="pt-10 border-t-2 pl-4 pr-10">
       <div class="flex">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">02</div>
         <div>
           <h3 class="text-2xl text-pf-title py-3 font-semibold tracking-widest">
             SKILLS
           </h3>
-          <div class="grid grid-cols-5 gap-5 py-10">
+          <div class="grid grid-cols-5 gap-5 pt-10">
             <div>
               <img src="images/js.png" class="w-10" alt="" />
               <p class="text-xs text-center">Javascript</p>
@@ -158,8 +161,9 @@
         </div>
       </div>
     </section>
+    <div class="pb-14" id="projects-line"></div>
 
-    <section id="projects" class="w-full mb-4 py-4 border-t-2">
+    <section id="projects" class="w-full mb-4 pt-10 border-t-2 pl-4 pr-8">
       <div class="flex">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">03</div>
         <div class="w-full">
@@ -183,7 +187,7 @@
               <p class="pb-4 text-sm font-normal">
                 Track your food intake and monitor your health
               </p>
-              <div class="flex space-x-2 font-extralight text-xs pb-4">
+              <div class="flex space-x-1 font-extralight text-xs pb-4">
                 <p class="border-2 rounded-xl px-2 py-1">React</p>
                 <p class="border-2 rounded-xl px-2 py-1">Vite</p>
                 <p class="border-2 rounded-xl px-2 py-1">Material UI</p>
@@ -192,7 +196,7 @@
               <div>
                 <button
                   type="button"
-                  class="bg-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs"
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs"
                 >
                   Github
                 </button>
@@ -330,7 +334,7 @@
       </div>
     </section>
 
-    <section id="contact-form" class="py-4 border-t-2">
+    <section id="contact" class="py-10 border-t-2 pl-4 pr-10">
       <div class="flex py-4">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">04</div>
         <div>
@@ -338,7 +342,7 @@
             CONTACT
           </h3>
 
-          <p class="text-base pt-4 pb-8">
+          <p class="text-base font-normal pt-4 pb-8">
             Let me know if you are interested to work together!
           </p>
 
