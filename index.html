@@ -26,7 +26,7 @@
   <body class="bg-pf-cream font-customFont border">
     <script src="script.js"></script>
     <nav
-      class="fixed bg-pf-cream top-0 left-0 right-0 z-10 px-8 lg:px-20 flex justify-between border-b-2 pt-12 pb-2"
+      class="fixed bg-pf-cream top-0 left-0 right-0 z-10 px-8 lg:px-20 flex justify-between pt-12 pb-2"
     >
       <div>ATIKAH</div>
       <div id="hamburger-icon" class="md:hidden" onclick="toggleMenu()">
@@ -62,36 +62,62 @@
       </div>
       <!--menu for desktop-->
       <ul
-        class="hidden md:flex w-2/3 justify-between font-medium text-base text-pf-blue"
+        class="hidden md:flex w-3/4 xl:w-1/2 justify-between items-center font-medium text-sm text-pf-blue"
       >
-        <li><a href="">HOME</a></li>
-        <li><a href="#projects-line">PROJECTS</a></li>
-        <li><a href="#aboutme-line">ABOUT ME</a></li>
-        <li><a href="#skills-line">SKILLS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li
+          class="hover:bg-pf-blue hover:rounded-2xl hover:text-pf-cream px-4 py-1"
+        >
+          <a href="">HOME</a>
+        </li>
+        <li
+          class="hover:bg-pf-blue hover:rounded-2xl hover:text-pf-cream px-4 py-1"
+        >
+          <a href="#projects-line">PROJECTS</a>
+        </li>
+        <li
+          class="hover:bg-pf-blue hover:rounded-2xl hover:text-pf-cream px-4 py-1"
+        >
+          <a href="#aboutme-line">ABOUT ME</a>
+        </li>
+        <li
+          class="hover:bg-pf-blue hover:rounded-2xl hover:text-pf-cream px-4 py-1"
+        >
+          <a href="#skills-line">SKILLS</a>
+        </li>
+        <li class="bg-pf-blue text-pf-cream px-4 py-1 rounded-xl">
+          <a href="#contact">CONTACT</a>
+        </li>
       </ul>
     </nav>
-    <header class="h-screen flex flex-col">
-      <div class="lg:px-20 flex flex-col h-full justify-center px-8">
-        <h1 class="text-3xl md:text-5xl font-bold text-pf-blue">
+    <header class="h-screen flex flex-col md:pt-24">
+      <div
+        id="header-text"
+        class="lg:px-20 md:space-y-3 flex flex-col h-full justify-center px-8 opacity-0 transform -translate-x-full transition-transform duration-500 ease-in-out"
+      >
+        <h1 class="text-3xl md:text-4xl font-bold text-pf-blue">
           Hi! I'm Atikah.
         </h1>
-        <h1 class="text-3xl md:text-5xl font-bold text-pf-blue">
+        <h1 class="text-3xl md:text-4xl font-bold text-pf-blue">
           A Frontend Web Developer
         </h1>
-        <h4 class="py-8 text-pf-blue">
+        <h4 class="py-6 text-pf-blue">
           I code and design user experience (UX).
         </h4>
-        <div class="flex py-4 space-x-2">
-          <img src="images/twitter.png" class="w-7" />
-          <img src="images/linkedin.png" class="w-7" alt="" />
-          <img src="images/github.png" class="w-7" alt="" />
-          <img src="images/email.png" class="w-7" alt="" />
+        <div class="flex py-8 space-x-2">
+          <img src="images/twitter.png" title="Twitter" class="w-7" />
+          <img src="images/linkedin.png" title="LinkedIn" class="w-7" alt="" />
+          <a href="https://github.com/atikahnaz"
+            ><img src="images/github.png" title="Github" class="w-7" alt=""
+          /></a>
+
+          <a href="mailto:atikahnazir6@gmail.com">
+            <img src="images/email.png" title="Email" class="w-7" alt="" />
+          </a>
         </div>
-        <div class="pt-4">
+        <div class="pt-3">
           <button
             type="button"
-            class="bg-pf-blue font-bold text-xs px-4 py-2 rounded-2xl text-pf-cream"
+            class="bg-pf-blue font-bold text-xs md:text-base px-4 py-2 rounded-2xl text-pf-cream"
           >
             Contact Me
           </button>
@@ -99,7 +125,11 @@
       </div>
     </header>
     <div class="pb-14" id="aboutme-line"></div>
-    <section id="aboutme" class="lg:px-20 pt-10 bg-pf bg-pf-blue pl-4 pr-10">
+
+    <section
+      id="aboutme"
+      class="lg:px-20 md:pb-10 pt-10 bg-pf bg-pf-blue pl-4 pr-10"
+    >
       <div class="flex">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-cream">01</div>
         <div>
@@ -109,9 +139,10 @@
             ABOUT ME
           </h3>
           <div class="md:flex">
-            <img src="images/jkred.jpg" class="md:w-1/4 py-4" alt="" />
+            <img src="images/jkred.jpg" class="md:w-1/4 py-4 md:pr-4" alt="" />
+
             <p
-              class="text-sm text-pf-cream tracking-wide pt-4 pb-4 md:w-3/4 md:pl-4"
+              class="text-sm md:text-base text-pf-cream tracking-wide pt-4 pb-4 md:w-3/4 md:pl-4"
             >
               Hey there! I'm Atikah, a frontend web developer from Kuala Lumpur,
               Malaysia. I'm passionate about crafting user-friendly websites
@@ -126,16 +157,25 @@
       </div>
     </section>
 
-    <section id="skills" class="pt-10 border-t-2 pl-4 pr-10">
-      <div class="flex lg:px-20">
+    <section
+      id="skills"
+      class="lg:px-20 w-full mb-4 pt-10 border-t-2 pl-4 pr-8"
+    >
+      <div class="flex">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">02</div>
-        <div>
+        <div class="w-full">
           <h3
             class="text-2xl lg:text-3xl text-pf-title py-3 font-semibold tracking-widest"
           >
             SKILLS
           </h3>
-          <div class="grid grid-cols-5 gap-5 pt-10">
+          <div
+            class="grid grid-cols-4 gap-5 pt-10 justify-items-center bg-slate-400 w-full"
+          >
+            <div>
+              <img src="images/letter-c.png" class="w-10" alt="" />
+              <p class="text-xs text-center">C</p>
+            </div>
             <div>
               <img src="images/js.png" class="w-10" alt="" />
               <p class="text-xs text-center">Javascript</p>
@@ -144,10 +184,7 @@
               <img src="images/html.png" class="w-10" alt="" />
               <p class="text-xs text-center">HTML</p>
             </div>
-            <div>
-              <img src="images/letter-c.png" class="w-10" alt="" />
-              <p class="text-xs text-center">C</p>
-            </div>
+
             <div>
               <img src="images/css-3.png" class="w-10" alt="" />
               <p class="text-xs text-center">CSS</p>
@@ -217,153 +254,113 @@
                 <p class="border-2 rounded-xl px-2 py-1">Material UI</p>
                 <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
               </div>
-              <div>
-                <button
-                  type="button"
-                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs md:text-base"
+              <div class="flex space-x-1">
+                <div
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl w-fit px-5 py-1 font-semibold text-xs md:text-base"
                 >
-                  Github
-                </button>
-                <button
-                  type="button"
-                  class="bg-pf-blue text-pf-cream rounded-2xl px-5 py-1 font-semibold text-xs md:text-base"
+                  <a
+                    href="https://github.com/atikahnaz/Diet_Journal"
+                    target="_blank"
+                    >Github</a
+                  >
+                </div>
+                <div
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl w-fit px-5 py-1 font-semibold text-xs md:text-base"
                 >
-                  Live Site
-                </button>
+                  <a
+                    href="https://atikahnaz.github.io/Diet_Journal/"
+                    target="_blank"
+                    >Live Site</a
+                  >
+                </div>
               </div>
             </div>
           </div>
 
           <!--project 2nd-->
           <!--container-->
-          <div class="border-b-2 py-10">
-            <div>
+          <div
+            class="border-b-2 md:py-0 py-10 md:flex flex-row-reverse justify-between"
+          >
+            <div class="md:w-1/2">
               <img src="images/ecommerce.png" alt="" />
             </div>
-            <h3 class="font-bold text-xl pb-4 tracking-wider text-pf-blue">
-              E-commerce product page
-            </h3>
-            <p class="pb-4 text-sm font-normal">
-              Responsive website where users can add, update and delete product
-              in a cart.
-            </p>
-            <div class="flex space-x-1 font-extralight text-xs pb-4">
-              <p class="border-2 rounded-xl px-2 py-1">React</p>
-              <p class="border-2 rounded-xl px-2 py-1">Vite</p>
-              <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
-            </div>
-            <div>
-              <button
-                type="button"
-                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+            <div class="flex flex-col justify-center lg:space-y-4">
+              <h3
+                class="md:text-3xl font-bold text-xl pb-4 tracking-wider text-pf-blue"
               >
-                Github
-              </button>
-              <button
-                type="button"
-                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
-              >
-                Live Site
-              </button>
+                E-commerce product page
+              </h3>
+              <p class="pb-4 text-sm md:text-base font-normal">
+                Responsive website where users can add, update and delete
+                product in a cart.
+              </p>
+              <div class="flex space-x-1 font-extralight text-xs pb-4">
+                <p class="border-2 rounded-xl px-2 py-1">React</p>
+                <p class="border-2 rounded-xl px-2 py-1">Vite</p>
+                <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
+              </div>
+              <div class="flex space-x-1">
+                <div
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl w-fit px-5 py-1 font-semibold text-xs md:text-base"
+                >
+                  <a
+                    href="https://github.com/atikahnaz/ecommerce-product-page-main"
+                    target="_blank"
+                    >Github</a
+                  >
+                </div>
+                <div
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl w-fit px-5 py-1 font-semibold text-xs md:text-base"
+                >
+                  <a
+                    href="https://atikahnaz.github.io/ecommerce-product-page-main/"
+                    target="_blank"
+                    >Live Site</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
 
           <!--project 3rd-->
           <!--container-->
-          <div class="py-10">
-            <div>
+          <div class="md:py-0 py-10 md:flex flex-row-reverse justify-between">
+            <div class="md:w-1/2">
               <img src="images/interactive-comments.png" alt="" />
             </div>
-            <h3 class="font-bold text-xl pb-4 tracking-wider text-pf-blue">
-              Interactive Comments
-            </h3>
-            <p class="pb-4 text-sm font-normal">
-              Users can leave a comment, delete and update text.
-            </p>
-            <div class="flex space-x-1 font-extralight text-xs pb-4">
-              <p class="border-2 rounded-xl px-2 py-1">React</p>
-              <p class="border-2 rounded-xl px-2 py-1">Vite</p>
-              <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
-            </div>
-            <div>
-              <button
-                type="button"
-                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+            <div class="flex flex-col justify-center lg:space-y-4">
+              <h3
+                class="md:text-3xl font-bold text-xl pb-4 tracking-wider text-pf-blue"
               >
-                Github
-              </button>
-              <button
-                type="button"
-                class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
-              >
-                Live Site
-              </button>
-            </div>
-          </div>
-          <!--projects-->
-          <!--
-<div class="mb-4 relative">
-            <div class="">
-              <img
-                src="images/Desktop - 9.png"
-                class="bg-[#F9F6D6] rounded-2xl"
-                alt=""
-              />
-            </div>
-            <div class="absolute top-0 px-6 py-4">
-              <h4 class="text-lg font-semibold text-pf-blue py-4">
-                Food Journal
-              </h4>
-              <p class="pb-4 text-base">
-                Track your food intake and monitor your health
+                Interactive Comments
+              </h3>
+              <p class="pb-4 text-sm md:text-base font-normal">
+                Users can leave a comment, delete and update text.
               </p>
-              <div>
-                <button
-                  type="button"
-                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+              <div class="flex space-x-1 font-extralight text-xs pb-4">
+                <p class="border-2 rounded-xl px-2 py-1">React</p>
+                <p class="border-2 rounded-xl px-2 py-1">Vite</p>
+                <p class="border-2 rounded-xl px-2 py-1">Tailwind</p>
+              </div>
+              <div class="flex space-x-1">
+                <div
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl w-fit px-5 py-1 font-semibold text-xs md:text-base"
                 >
-                  Github
-                </button>
-                <button
-                  type="button"
-                  class="bg-pf-blue text-pf-cream rounded-2xl px-3 py-1 font-semibold text-xs"
+                  <a
+                    href="https://github.com/atikahnaz/interactive-comments-section-main"
+                    target="_blank"
+                    >Github</a
+                  >
+                </div>
+                <div
+                  class="bg-pf-blue hover:bg-pf-yellow hover:text-pf-blue text-pf-cream rounded-2xl w-fit px-5 py-1 font-semibold text-xs md:text-base"
                 >
-                  Live Site
-                </button>
+                  <a href="" target="_blank">Live Site</a>
+                </div>
               </div>
             </div>
           </div>
-          -->
-
-          <!--
- <div
-            class="flex py-4 border-2 p-4 relative h-96 rounded-2xl overflow-clip"
-          >
-            <div>
-              <h4 class="text-xl font-medium text-pf-blue py-4">
-                Food Journal
-              </h4>
-              <p class="pb-4">Track your food intake and monitor your health</p>
-              <div>
-                <button
-                  type="button"
-                  class="bg-pf-blue text-pf-cream rounded-lg px-3 py-1"
-                >
-                  Github
-                </button>
-                <button
-                  type="button"
-                  class="bg-pf-blue text-pf-cream rounded-lg px-3 py-1"
-                >
-                  Live Site
-                </button>
-              </div>
-              <div class="absolute -bottom-14">
-                <img src="images/food-journal.png" class="scale-125" alt="" />
-              </div>
-            </div>
-          </div>
-          -->
         </div>
       </div>
     </section>
@@ -371,7 +368,7 @@
     <section id="contact" class="lg:px-20 py-10 border-t-2 pl-4 pr-10">
       <div class="flex py-4">
         <div class="text-2xl py-3 pr-4 font-semibold text-pf-numbers">04</div>
-        <div>
+        <div class="w-full">
           <h3
             class="text-2xl lg:text-3xl text-pf-title py-3 font-semibold tracking-widest"
           >
@@ -387,27 +384,31 @@
             method="post"
             enctype="text/plain"
             id="message-form"
+            class="flex flex-col md:flex-row"
           >
-            <input
-              type="text"
-              placeholder="Name"
-              id="name"
-              class="w-full bg-pf-cream border-b border-pf-blue pl-1 py-2 mb-4"
-            />
-            <input
-              type="email"
-              placeholder="E-mail"
-              id="email"
-              name="email"
-              class="w-full bg-pf-cream border-b border-pf-blue pl-1 py-2 mb-4"
-            />
+            <div class="md:pr-10 md:w-1/2">
+              <input
+                type="text"
+                placeholder="Name"
+                id="name"
+                class="w-full bg-pf-cream border-b border-pf-blue pl-1 py-2 mb-4"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                id="email"
+                name="email"
+                class="w-full bg-pf-cream border-b border-pf-blue pl-1 py-2 mb-4"
+              />
+            </div>
+
             <textarea
               name="message"
               id="message"
               cols="10"
               rows="3"
               placeholder="Hi Atikah!"
-              class="w-full border-pf-blue border rounded-md p-2 bg-pf-cream"
+              class="w-full md:w-1/2 border-pf-blue border rounded-md p-2 bg-pf-cream"
             ></textarea>
           </form>
           <button
@@ -417,15 +418,20 @@
           >
             Send
           </button>
-          <div class="flex py-4 space-x-2">
-            <img src="images/twitter.png" class="w-5" />
-            <img src="images/linkedin.png" class="w-5" alt="" />
+          <div class="flex py-8 space-x-2">
+            <img src="images/twitter.png" title="Twitter" class="w-5" />
+            <img
+              src="images/linkedin.png"
+              title="LinkedIn"
+              class="w-5"
+              alt=""
+            />
             <a href="https://github.com/atikahnaz"
-              ><img src="images/github.png" class="w-5" alt=""
+              ><img src="images/github.png" title="Github" class="w-5" alt=""
             /></a>
 
             <a href="mailto:atikahnazir6@gmail.com">
-              <img src="images/email.png" class="w-5" alt="" />
+              <img src="images/email.png" title="Email" class="w-5" alt="" />
             </a>
           </div>
         </div>
@@ -434,15 +440,25 @@
 
     <section
       id="popup-message"
-      class="flex flex-col fixed top-0 justify-center items-center w-full h-full bg-slate-300"
+      class="hidden flex-col fixed top-0 justify-center items-center w-full h-full bg-pf-cream bg-opacity-90"
     >
-      <div class="bg-slate-400 px-5 py-5 rounded-lg">
-        Your message is sent succesfully
+      <div
+        class="flex flex-col justify-center items-center py-5 rounded-lg bg-pf-blue text-pf-cream"
+      >
+        <div id="messageStatus" class="px-5 rounded-lg text-base">
+          Your message is sent succesfully
+        </div>
+        <div
+          class="bg-pf-cream text-pf-blue text-sm px-3 py-1 mt-3 rounded-2xl"
+          onclick="toggleMessageAlert()"
+          class="cursor-pointer"
+        >
+          Close
+        </div>
       </div>
-      <div onclick="toggleMessageAlert()">close</div>
     </section>
     <footer
-      class="absolute left-0 right-0 bg-yellow-300 py-5 font-medium text-sm text-pf-title text-center"
+      class="absolute left-0 right-0 bg-yellow-300 py-5 font-medium text-xs text-pf-title text-center"
     >
       Copyright Atikah 2024
     </footer>
