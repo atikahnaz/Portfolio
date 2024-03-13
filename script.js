@@ -51,17 +51,17 @@ window.onload = function () {
   }, 500);
 };
 
-let observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.remove("opacity-0");
-      entry.target.classList.add("opacity-100");
-    } else {
-      entry.target.classList.remove("opacity-100");
-      entry.target.classList.add("opacity-0");
-    }
-  });
-});
-const hiddenElements = [...document.getElementsByTagName("section")];
-hiddenElements.forEach((element) => observer.observe(element));
+// let observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//     if (entry.isIntersecting) {
+//       entry.target.classList.remove("opacity-0");
+//       entry.target.classList.add("opacity-100");
+//     } else {
+//       entry.target.classList.remove("opacity-100");
+//       entry.target.classList.add("opacity-0");
+//     }
+//   });
+// });
+// const hiddenElements = [...document.getElementsByTagName("section")];
+// hiddenElements.forEach((element) => observer.observe(element));
