@@ -851,6 +851,10 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1009,10 +1013,6 @@ video {
   transition-duration: 150ms;
 }
 
-.delay-200 {
-  transition-delay: 200ms;
-}
-
 .delay-500 {
   transition-delay: 500ms;
 }
@@ -1088,6 +1088,10 @@ video {
 
   .md\:gap-7 {
     gap: 1.75rem;
+  }
+
+  .md\:gap-9 {
+    gap: 2.25rem;
   }
 
   .md\:space-y-3 > :not([hidden]) ~ :not([hidden]) {
