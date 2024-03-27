@@ -1,6 +1,6 @@
 function toggleMenu() {
   var buttonMenu = document.getElementById("hamburger-menu");
-  buttonMenu.classList.toggle("hidden");
+  buttonMenu.classList.toggle("translate-x-full");
 }
 
 function toggleMessageAlert() {
