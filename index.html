@@ -12,6 +12,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript">
       (function () {
         emailjs.init({
@@ -92,27 +93,38 @@
       </ul>
     </nav>
 
-    <header class="h-screen flex flex-col md:pt-24 lg:text-center">
+    <header
+      class="h-screen flex lg:flex lg:items-center lg:justify-center flex-col md:pt-24 lg:text-center tracking-wide"
+    >
+      <!--<div class="card-wrapper h-[400px] w-1/2">
+        <div class="card-content flex items-center justify-center">
+          Hi! I'm Atikah
+        </div>
+      </div> -->
       <div
         id="header-text"
-        class="lg:px-20 md:space-y-3 flex flex-col h-full justify-center px-8 opacity-0 transform -translate-x-full transition-transform duration-500 ease-in-out"
+        class="md:space-y-3 flex flex-col h-full justify-center px-8 opacity-0 transform delay-300 transition-transform duration-500 ease-in-out"
       >
-        <div class="lg:py-24 lg:mx-36 lg:border-4 lg:border-pf-blue">
+        <div
+          class="lg:py-20 lg:px-36 lg:border-4 animate-fade-text lg:border-pf-blue"
+        >
           <h1
-            class="text-3xl lg:tracking-widest lg:text-5xl lg:mb-5 md:text-4xl font-bold text-pf-blue"
+            class="text-3xl animate-fade-letter lg:tracking-widest lg:text-5xl lg:mb-5 md:text-4xl font-bold text-pf-blue"
           >
             Hi! I'm Atikah
           </h1>
           <h1
-            class="text-3xl lg:tracking-widest md:text-4xl font-bold text-pf-blue"
+            class="text-3xl animate-fade-letter lg:tracking-widest md:text-4xl font-bold text-pf-blue"
           >
             A Frontend Web Developer
           </h1>
-          <h4 class="py-6 text-pf-blue lg:pt-14 lg:tracking-widest">
+          <h4
+            class="py-6 animate-fade-letter text-pf-blue lg:pt-14 lg:tracking-widest"
+          >
             I code and design user experience (UX).
           </h4>
           <div
-            class="flex py-8 lg:py-0 space-x-2 lg:space-x-5 lg:justify-center"
+            class="flex animate-fade-letter py-8 lg:py-0 space-x-2 lg:space-x-5 lg:justify-center"
           >
             <img src="images/twitter.png" title="Twitter" class="w-7" />
             <img
@@ -133,7 +145,7 @@
             <a href="#contact">
               <button
                 type="button"
-                class="lg:hidden bg-pf-blue font-bold text-xs md:text-base px-4 py-2 rounded-2xl text-pf-cream"
+                class="lg:hidden animate-fade-letter bg-pf-blue font-bold text-xs md:text-base px-4 py-2 rounded-2xl text-pf-cream"
               >
                 Contact Me
               </button>
