@@ -65,3 +65,28 @@ window.onload = function () {
 // });
 // const hiddenElements = [...document.getElementsByTagName("section")];
 // hiddenElements.forEach((element) => observer.observe(element));
+
+// slider animation for project
+
+const imageRight = document.getElementById("imagefood");
+
+const options = {
+  root: null,
+  threshold: 0,
+  rootMargin: "0px 0px -100px 0px",
+};
+
+const slider = (entries, contentSlide) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.add("slider-right");
+  });
+};
+
+const contentSlide = new IntersectionObserver(slider, options);
+contentSlide.observe(imageRight);
+//const imageSlide = new IntersectionObserver(function (entries, imageSlide) {
+//  imageSlide.observe(entries);
+//}, options);

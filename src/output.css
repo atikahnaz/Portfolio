@@ -658,7 +658,7 @@ video {
   }
 }
 
-.animate-\[fade-up_1\.5s\] {
+.animate-fade-letter {
   animation: fade-up 1.5s;
 }
 
@@ -676,22 +676,6 @@ video {
 
 .animate-fade-text {
   animation: fade-up 1s;
-}
-
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-}
-
-.animate-fade-letter {
-  animation: fade-up 1.5s;
 }
 
 .cursor-pointer {
@@ -750,6 +734,10 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .scroll-smooth {
@@ -1143,6 +1131,19 @@ video {
   border-radius: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(251 250 242 / var(--tw-bg-opacity));
+}
+
+/*custom css*/
+
+.image-right {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: transform 500ms ease-in, opacity 250ms ease-in;
+}
+
+.slider-right {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .hover\:rounded-2xl:hover {
