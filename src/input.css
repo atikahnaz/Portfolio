@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @layer utilities {
-  /*border*/
+  /*border
   .card-wrapper {
     @apply relative bg-pf-blue overflow-hidden  rounded-2xl;
-  }
+  }*/
 
-  /*gradient*/
+  /*gradient
   .card-wrapper::before {
     @apply absolute origin-top-left  top-1/2  bg-gradient-to-r from-pf-cream to-pf-yellow  h-[35%] w-[100%] content-[''] animate-border-spin;
   }
 
   .card-content {
     @apply absolute w-[calc(100%-6px)] rounded-2xl h-[calc(100%-6px)] top-[3px] left-[3px] bg-pf-cream;
-  }
+  }*/
 }
 
 /*custom css*/
@@ -23,7 +23,7 @@
 .image-right {
   transform: translateX(50%);
   opacity: 0;
-  transition: transform 500ms ease-in, opacity 250ms ease-in;
+  transition: transform 300ms ease-in, opacity 350ms ease-out;
 }
 .slider-right {
   transform: translateX(0);

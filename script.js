@@ -66,9 +66,9 @@ window.onload = function () {
 // const hiddenElements = [...document.getElementsByTagName("section")];
 // hiddenElements.forEach((element) => observer.observe(element));
 
-// slider animation for project
+// slider animation for project image right side
 
-const imageRight = document.getElementById("imagefood");
+const imageRight = document.querySelectorAll(".image-right");
 
 const options = {
   root: null,
@@ -86,7 +86,10 @@ const slider = (entries, contentSlide) => {
 };
 
 const contentSlide = new IntersectionObserver(slider, options);
-contentSlide.observe(imageRight);
+imageRight.forEach((imageSingle) => {
+  contentSlide.observe(imageSingle);
+});
+
 //const imageSlide = new IntersectionObserver(function (entries, imageSlide) {
 //  imageSlide.observe(entries);
 //}, options);
