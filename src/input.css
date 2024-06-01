@@ -23,9 +23,19 @@
 .image-right {
   transform: translateX(50%);
   opacity: 0;
-  transition: transform 300ms ease-in, opacity 350ms ease-out;
+  transition: transform 500ms ease-in, opacity 350ms ease-out;
 }
 .slider-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.textContent-left {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 500ms ease-in, opacity 350ms ease-out;
+}
+.textContent-slider-left {
   transform: translateX(0);
   opacity: 1;
 }

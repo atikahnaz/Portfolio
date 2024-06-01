@@ -69,13 +69,15 @@ window.onload = function () {
 // slider animation for project image right side
 
 const imageRight = document.querySelectorAll(".image-right");
+const textContent = document.querySelectorAll(".textContent-left");
 
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: "0px 0px -100px 0px",
+  rootMargin: "0px 0px -50px 0px",
 };
 
+// callback for image slider
 const slider = (entries, contentSlide) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
@@ -85,9 +87,25 @@ const slider = (entries, contentSlide) => {
   });
 };
 
+// callback for text slider
+const slideFromLeft = (entries, text) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.add("textContent-slider-left");
+  });
+};
+
 const contentSlide = new IntersectionObserver(slider, options);
+const textSlide = new IntersectionObserver(slideFromLeft, options);
+
 imageRight.forEach((imageSingle) => {
   contentSlide.observe(imageSingle);
+});
+
+textContent.forEach((text) => {
+  textSlide.observe(text);
 });
 
 //const imageSlide = new IntersectionObserver(function (entries, imageSlide) {

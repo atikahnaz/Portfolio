@@ -1085,63 +1085,40 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*border*/
+/*border
+  .card-wrapper {
+    @apply relative bg-pf-blue overflow-hidden  rounded-2xl;
+  }*/
 
-.card-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 46 105 / var(--tw-bg-opacity));
-}
-
-/*gradient*/
-
-.card-wrapper::before {
-  position: absolute;
-  top: 50%;
-  height: 35%;
-  width: 100%;
-  transform-origin: top left;
-}
-
-@keyframes border-spin {
-  100% {
-    transform: rotate(-360deg);
+/*gradient
+  .card-wrapper::before {
+    @apply absolute origin-top-left  top-1/2  bg-gradient-to-r from-pf-cream to-pf-yellow  h-[35%] w-[100%] content-[''] animate-border-spin;
   }
-}
 
-.card-wrapper::before {
-  animation: border-spin 7s linear infinite;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #FBFAF2 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(251 250 242 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #FFF61E var(--tw-gradient-to-position);
-  --tw-content: '';
-  content: var(--tw-content);
-}
-
-.card-content {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  height: calc(100% - 6px);
-  width: calc(100% - 6px);
-  border-radius: 1rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 250 242 / var(--tw-bg-opacity));
-}
+  .card-content {
+    @apply absolute w-[calc(100%-6px)] rounded-2xl h-[calc(100%-6px)] top-[3px] left-[3px] bg-pf-cream;
+  }*/
 
 /*custom css*/
 
 .image-right {
   transform: translateX(50%);
   opacity: 0;
-  transition: transform 500ms ease-in, opacity 250ms ease-in;
+  transition: transform 500ms ease-in, opacity 350ms ease-out;
 }
 
 .slider-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.textContent-left {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 500ms ease-in, opacity 350ms ease-out;
+}
+
+.textContent-slider-left {
   transform: translateX(0);
   opacity: 1;
 }
