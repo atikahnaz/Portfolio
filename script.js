@@ -48,7 +48,22 @@ window.onload = function () {
   setTimeout(function () {
     document.getElementById("header-text").style.opacity = "1"; // Display the text
     document.getElementById("header-text").style.transform = "translateX(0)";
-  }, 500);
+  }, 100);
+
+  // button click navigation
+
+  const projectsButton = document.getElementById("web-projects-button");
+  const uxButton = document.getElementById("ux-design-button");
+
+  projectsButton.addEventListener("click", function () {
+    document.getElementById("web-project").classList.remove("hidden");
+    document.getElementById("ux").classList.add("hidden");
+  });
+
+  uxButton.addEventListener("click", function () {
+    document.getElementById("web-project").classList.add("hidden");
+    document.getElementById("ux").classList.remove("hidden");
+  });
 };
 
 // let observer = new IntersectionObserver((entries) => {
@@ -73,8 +88,8 @@ const textContent = document.querySelectorAll(".textContent-left");
 
 const options = {
   root: null,
-  threshold: 0,
-  rootMargin: "0px 0px -50px 0px",
+  threshold: 0.3,
+  rootMargin: "0px 0px 0px 0px",
 };
 
 // callback for image slider
@@ -84,6 +99,7 @@ const slider = (entries, contentSlide) => {
       return;
     }
     entry.target.classList.add("slider-right");
+    contentSlide.unobserve(entry.target);
   });
 };
 
@@ -94,6 +110,7 @@ const slideFromLeft = (entries, text) => {
       return;
     }
     entry.target.classList.add("textContent-slider-left");
+    text.unobserve(entry.target);
   });
 };
 
@@ -107,7 +124,3 @@ imageRight.forEach((imageSingle) => {
 textContent.forEach((text) => {
   textSlide.observe(text);
 });
-
-//const imageSlide = new IntersectionObserver(function (entries, imageSlide) {
-//  imageSlide.observe(entries);
-//}, options);
