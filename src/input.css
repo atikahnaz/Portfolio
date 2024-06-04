@@ -39,3 +39,19 @@
   transform: translateX(0);
   opacity: 1;
 }
+
+.content {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 1s ease-out;
+}
+
+.hideProject {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.hideProjectRight {
+  transform: translateX(50%);
+  opacity: 0;
+}

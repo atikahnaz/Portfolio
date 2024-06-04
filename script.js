@@ -56,17 +56,35 @@ window.onload = function () {
   const uxButton = document.getElementById("ux-design-button");
 
   projectsButton.addEventListener("click", function () {
+    document.getElementById("web-project").classList.remove("hideProjectRight");
     document.getElementById("web-project").classList.remove("hidden");
-    document.getElementById("ux").classList.add("hidden");
+    document.getElementById("web-project").classList.add("content");
+
     uxButton.classList.remove("border-b-4");
     projectsButton.classList.add("border-b-4");
+
+    // Ensure ux transition completes before removing it from layout
+    setTimeout(() => {
+      document.getElementById("ux").classList.add("hidden");
+    }, 1000);
+
+    document.getElementById("ux").classList.add("hideProject");
   });
 
   uxButton.addEventListener("click", function () {
-    document.getElementById("web-project").classList.add("hidden");
-    document.getElementById("ux").classList.remove("hidden");
+    document.getElementById("ux").classList.remove("hideProject");
+
+    document.getElementById("ux").classList.add("content");
     uxButton.classList.add("border-b-4");
     projectsButton.classList.remove("border-b-4");
+
+    // Ensure ux transition completes before removing it from layout
+    setTimeout(() => {
+      document.getElementById("web-project").classList.add("hidden");
+      document.getElementById("ux").classList.remove("hidden");
+    }, 1000);
+
+    document.getElementById("web-project").classList.add("hideProjectRight");
   });
 };
 
