@@ -40,6 +40,12 @@
   opacity: 1;
 }
 
+.hideContentLeft {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 1s ease-out;
+}
+
 .content {
   transform: translateX(0);
   opacity: 1;
