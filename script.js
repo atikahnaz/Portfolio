@@ -58,11 +58,15 @@ window.onload = function () {
   projectsButton.addEventListener("click", function () {
     document.getElementById("web-project").classList.remove("hidden");
     document.getElementById("ux").classList.add("hidden");
+    uxButton.classList.remove("border-b-4");
+    projectsButton.classList.add("border-b-4");
   });
 
   uxButton.addEventListener("click", function () {
     document.getElementById("web-project").classList.add("hidden");
     document.getElementById("ux").classList.remove("hidden");
+    uxButton.classList.add("border-b-4");
+    projectsButton.classList.remove("border-b-4");
   });
 };
 
