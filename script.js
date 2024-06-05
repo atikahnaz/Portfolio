@@ -74,20 +74,23 @@ window.onload = function () {
   });
 
   uxButton.addEventListener("click", function () {
-    document.getElementById("ux").classList.add("content");
-    document.getElementById("ux").classList.remove("hidden");
+    document.getElementById("web-project").classList.add("hideProjectRight");
+
     uxButton.classList.add("border-b-4");
     projectsButton.classList.remove("border-b-4");
 
     // Ensure ux transition completes before removing it from layout
     setTimeout(() => {
-      document.getElementById("web-project").classList.add("hidden");
-      document.getElementById("ux").classList.remove("hidden");
+      //document.getElementById("ux").classList.remove("hidden");
 
       document.getElementById("ux").classList.remove("hideProject");
+      document.getElementById("ux").classList.add("content");
+      document.getElementById("web-project").classList.add("hidden");
     }, 1000);
-
-    document.getElementById("web-project").classList.add("hideProjectRight");
+    setTimeout(() => {
+      document.getElementById("ux").classList.remove("hidden");
+    }, 800);
+    //document.getElementById("web-project").classList.add("hidden");
   });
 };
 
