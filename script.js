@@ -45,71 +45,54 @@ function sendMail() {
 }
 
 window.onload = function () {
-  setTimeout(function () {
-    document.getElementById("header-text").style.opacity = "1"; // Display the text
-    document.getElementById("header-text").style.transform = "translateX(0)";
-  }, 100);
+  //setTimeout(function () {
+  // document.getElementById("header-text").style.opacity = "1"; // Display the text
+  // document.getElementById("header-text").style.transform = "translateX(0)";
+  // }, 100);
+
+  document.getElementById("header-text").style.opacity = "1"; // Display the text
+  document.getElementById("header-text").style.transform = "translateX(0)";
 
   // button click navigation
 
   const projectsButton = document.getElementById("web-projects-button");
   const uxButton = document.getElementById("ux-design-button");
+  const web = document.getElementById("web-project");
+  const ux = document.getElementById("ux");
 
   projectsButton.addEventListener("click", function () {
-    document.getElementById("web-project").classList.remove("hidden");
-    document.getElementById("web-project").classList.add("content");
+    web.classList.remove("hidden");
+    web.classList.add("content");
 
     uxButton.classList.remove("border-b-4");
     projectsButton.classList.add("border-b-4");
 
     // Ensure ux transition completes before removing it from layout
     setTimeout(() => {
-      document.getElementById("ux").classList.add("hidden");
-      document
-        .getElementById("web-project")
-        .classList.remove("hideProjectRight");
+      ux.classList.add("hidden");
+      web.classList.remove("hideProjectRight");
     }, 1000);
 
-    document.getElementById("ux").classList.add("hideProject");
+    ux.classList.add("hideProject");
   });
 
   uxButton.addEventListener("click", function () {
-    document.getElementById("web-project").classList.add("hideProjectRight");
+    web.classList.add("hideProjectRight");
 
     uxButton.classList.add("border-b-4");
     projectsButton.classList.remove("border-b-4");
 
-    // Ensure ux transition completes before removing it from layout
+    // Ensure web transition completes before removing it from layout
     setTimeout(() => {
-      //document.getElementById("ux").classList.remove("hidden");
-
-      document.getElementById("ux").classList.remove("hideProject");
-      document.getElementById("ux").classList.add("content");
-      document.getElementById("web-project").classList.add("hidden");
+      ux.classList.remove("hideProject");
+      ux.classList.add("content");
+      web.classList.add("hidden");
     }, 1000);
     setTimeout(() => {
-      document.getElementById("ux").classList.remove("hidden");
+      ux.classList.remove("hidden");
     }, 800);
-    //document.getElementById("web-project").classList.add("hidden");
   });
 };
-
-// let observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//     if (entry.isIntersecting) {
-//       entry.target.classList.remove("opacity-0");
-//       entry.target.classList.add("opacity-100");
-//     } else {
-//       entry.target.classList.remove("opacity-100");
-//       entry.target.classList.add("opacity-0");
-//     }
-//   });
-// });
-// const hiddenElements = [...document.getElementsByTagName("section")];
-// hiddenElements.forEach((element) => observer.observe(element));
-
-// slider animation for project image right side
 
 const imageRight = document.querySelectorAll(".image-right");
 const textContent = document.querySelectorAll(".textContent-left");
